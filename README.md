@@ -1,10 +1,13 @@
+# NTOU Web Programming Final Project
+## Anya 大冒險 RPG
+
 ## Set up Express Enviroment
 
 ```
 $npm init
 ```
 
-# Install EJS
+## Install EJS
 
 ```
 $ npm ejs
@@ -29,6 +32,11 @@ $ npm install nodemon --save-dev
 ```
 $ npm install -g node-static
 $ npm install node-static --save
+```
+
+## Run 
+```
+node app.js
 ```
 
 ## To enjoy our RPG game :D
