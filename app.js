@@ -1,7 +1,11 @@
-let express = require('express');   // 載入express模組
-let engine = require('ejs-locals'); // 載入ejs-locals 模組
+const express = require('express');   // 載入express模組
+const engine = require('ejs-locals'); // 載入ejs-locals 模組
 
-let app = express();                // 使用express
+const app = express();                // 使用express
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const url = "mongodb+srv://fcebk17:admin@cluster0.ljwk5az.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 app.engine('ejs', engine);          
 app.set('views', './views');        // 將目的地 folder 設為 views
@@ -16,6 +20,18 @@ app.use('/music', express.static(__dirname + '/music'));
 
 app.get('/', function (req, res) {                      // build router for pages
     res.render('index', {'title': 'Anya大冒險RPG'});    // return index.ejs and title
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        const dbo = db.db("mydb");
+        let user_id = Date.now();
+    
+        let myobj = { user_id: user_id, star1: false, star2: false, star3: false, star4: false, star5: false, star6: false, star7: false, star8: false,  }
+        dbo.collection("user_story").insertOne(myobj, function (err, res) {
+            if (err) throw err;
+            console.log("1 document inserted");
+            db.close();
+        });
+    });
 });
 
 app.get('/loader', function (req, res) {
