@@ -1,6 +1,43 @@
 <% layout('layout') %>
 <link rel="stylesheet" href="/css/anyaIntro.css"/>
 <audio src="/music/mixed_nuts.mp3" autoplay loop></audio>
+
 <p>
     My name is Anya.
 </p>
+<script
+
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+<script>
+    var body = document.querySelector("body");
+    var temp = 0;
+    //window.setTimeout(jump,1500);
+    function spaceEvent(e) {
+        switch (e.keyCode) {
+        case 32:
+            if(temp == 0){
+                jump();
+                temp++
+            }
+                
+            else {
+                window.location.href = "/loyidIntro";
+                temp++;
+            }
+            break;
+        }
+    }
+    function jump(){
+        $('body').css('background-image','url(/img/anyaIntro.jpg)');
+        //console.log("jump");
+    }
+    body.addEventListener('keydown', spaceEvent, false);
+</script>
+<div claSS="row">
+    <div class="col-3">
+
+    </div>
+</div>

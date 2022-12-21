@@ -27,10 +27,10 @@ app.get('/recapVideo', function (req, res) {
 });
 
 app.get('/anyaIntro', function (req, res){
-    res.render('anyaIntro', {'title': 'Anya大冒險RPG - 自我介紹'});
+    res.render('anyaIntro', {'title': 'Anya大冒險RPG - 安妮亞自我介紹'});
 });
-app.get('/level1', function (req, res){
-    res.render('level1', {'title': 'Anya大冒險RPG - 關卡一'});
+app.get('/loyidIntro', function (req, res){
+    res.render('loyidIntro', {'title': 'Anya大冒險RPG - 洛伊德自我介紹'});
 });
 
 app.listen(3000); // 設定 port 3000
