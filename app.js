@@ -46,5 +46,9 @@ app.get('/anyaIntro', function (req, res){
     res.render('anyaIntro', {'title': 'Anya大冒險RPG - 自我介紹'});
 });
 
+app.get('/findAnyaGame', function (req, res){
+    res.render('findAnyaGame', {'title': 'Anya大冒險RPG - 找安妮亞小遊戲'});
+});
+
 app.listen(3000); // 設定 port 3000
 // 要用 axios.get
