@@ -65,6 +65,11 @@ app.get('/loyidAward', function (req, res){
 app.get('/findAnyaGame', function (req, res){
     res.render('findAnyaGame', {'title': 'Anya大冒險RPG - 找安妮亞小遊戲'});
 });
-
+app.get('/yorIntro', function (req, res){
+    res.render('yorIntro', {'title': 'Anya大冒險RPG - 約兒自我介紹'});
+});
+app.get('/anyaOS', function (req, res){
+    res.render('anyaOS', {'title': 'Anya大冒險RPG - 安妮亞OS'});
+});
 app.listen(3000); // 設定 port 3000
 // 要用 axios.get

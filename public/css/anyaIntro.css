@@ -6,3 +6,18 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+.image{
+    position:absolute;
+    bottom: 0%;
+    left: 0%;
+    overflow: hidden;
+}
+
+.content{
+    position:absolute;
+    font-size: 25px;
+    top: 40%;
+    left: 20%;
+    color:rgb(255, 255, 255);
+    width:70%;
+}

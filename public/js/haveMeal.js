@@ -42,8 +42,9 @@ function content(){
     //var pNode = document.getElementById("content");
     const pNode = document.getElementById("text");
     //console.log(pNode);
-    const text = document.createTextNode(text_string[0]);
-    pNode.appendChild(text);
+    //const text = document.createTextNode(text_string[0]);
+    //pNode.appendChild(text);
+    pNode.innerHTML = "<p>" + text_string_now[0] + "</p>";
 }
 //new button
 //按鈕
