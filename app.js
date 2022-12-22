@@ -48,6 +48,17 @@ app.get('/anyaIntro', function (req, res){
 app.get('/loyidIntro', function (req, res){
     res.render('loyidIntro', {'title': 'Anya大冒險RPG - 洛伊德自我介紹'});
 });
-
+app.get('/easyMath', function (req, res){
+    res.render('easyMath', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 算數學(easy)'});
+});
+app.get('/hardMath', function (req, res){
+    res.render('hardMath', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 算數學(hard)'});
+});
+app.get('/haveMeal', function (req, res){
+    res.render('haveMeal', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 吃飯'});
+});
+app.get('/loyidAward', function (req, res){
+    res.render('loyidAward', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 給獎勵'});
+});
 app.listen(3000); // 設定 port 3000
 // 要用 axios.get
