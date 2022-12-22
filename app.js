@@ -71,5 +71,8 @@ app.get('/yorIntro', function (req, res){
 app.get('/anyaOS', function (req, res){
     res.render('anyaOS', {'title': 'Anya大冒險RPG - 安妮亞OS'});
 });
+app.get('/bondIntro', function (req, res){
+    res.render('bondIntro', {'title': 'Anya大冒險RPG - 彭德自我介紹'});
+});
 app.listen(3000); // 設定 port 3000
 // 要用 axios.get
