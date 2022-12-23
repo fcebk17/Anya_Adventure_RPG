@@ -1,6 +1,7 @@
 $("body").click(function(){
     $(".slogan").hide();
 });
+
 var body = document.querySelector("body");
 var counter =10;
 var temp = 0;
@@ -18,15 +19,20 @@ function spaceEvent(e) {
             console.log(counter);
         }
         else{
-            window.alert("得到點心了！");
+            $("#myAlertModal").modal('show');
+            $(".getStar").hide().fadeIn(500).fadeOut(2500);
             clearTimeout(timer);
+            break;
         }
         break;
     }
 }
+
 function stopActivity(){
-    window.alert("跑太慢了！你不是彭德，需要減肥重跑");
-    //clearTimeout(timer);
-    window.location.href = "/WalkTheDog";
+    $("#modaltitle").html('You are a loser. ⌓‿⌓')
+    $("#linktxt").attr('href', '/WalkTheDog');
+    $("#buttontxt").html("再來一次QAQ");
+    $("#modal-txt").html("跑太慢了！你不是彭德，需要減肥重跑");
+    $("#myAlertModal").modal('show');
 }
 body.addEventListener('keydown', spaceEvent, false);

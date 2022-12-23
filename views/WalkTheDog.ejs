@@ -1,10 +1,34 @@
 <% layout('layout') %>
 <link rel="stylesheet" href="/css/WalkTheDog.css"/>
-<!--jQuery--> 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="/css/button.css"/>
+<link rel="stylesheet" href="/css/modal.css"/>
+<link rel="stylesheet" href="/css/slogan.css"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 <script src="/js/WalkTheDog.js"></script>
+<div class="slogan">
+    請瘋狂按空白鍵
+</div>
+<div class="getStar">
+    您獲得一顆星星⭐<br>
+    (ゝ∀･)⌒☆
+</div>
 <div>
     <img id = "image1" src="/img/WalkTheDog.png">
     <img id = "image2" src="/img/bone.png">
     <img id = "image3" src="/img/peanut.png">
+</div>
+<div class="modal" data-backdrop="static" tabindex="-1" role="dialog" id="myAlertModal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-light text-black">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modaltitle">恭喜過關🎉</h5>
+            </div>
+            <div class="modal-body" id="modal-txt">
+                得到好吃的點心啦✧*｡٩(ˊᗜˋ*)و✧*｡
+            </div>
+            <div class="modal-footer">
+                <a href="/bondIntro" id="linktxt"><button type="button" id="buttontxt">繼續遊戲</button></a>
+            </div>
+        </div>
+    </div>
 </div>

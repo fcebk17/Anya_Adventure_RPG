@@ -10,6 +10,7 @@ $(document).ready(function(){
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
             $("#myAlertModal").modal('show');
+            $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
     });
     
@@ -19,6 +20,7 @@ $(document).ready(function(){
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
             $("#myAlertModal").modal('show');
+            $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
     });
     
@@ -28,6 +30,7 @@ $(document).ready(function(){
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
             $("#myAlertModal").modal('show');
+            $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
     });
     
@@ -37,6 +40,7 @@ $(document).ready(function(){
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
             $("#myAlertModal").modal('show');
+            $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
     });
     
@@ -46,6 +50,7 @@ $(document).ready(function(){
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
             $("#myAlertModal").modal('show');
+            $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
     });
 });
