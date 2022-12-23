@@ -5,7 +5,7 @@ var choose_button_string = ["button1","button2","button3","button4"];
 var choose_button_value = ["9","10","11","12"];
 var text_string = ["爸爸問我8+21/7=?哇…怎麼還有除法@@，那要回答多少呢？可惡！為什麼拔爸不用算，嗚嗚～不能用讀心術……"];
 
-$('body').css('background-image','url(/img/livingroom.jpg)');
+$('body').css('background-image','url(/img/hardMath.png)');
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:
@@ -26,12 +26,6 @@ function spaceEvent(e) {
         break;
     }
 }
-//頁面1
-function start(){
-    $('body').css('background-image','url(/img/livingroom.jpg)');
-    console.log("start");
-}
-
 //頁面2(對話框)
 function dialog(){
     var image=document.getElementById("dialog");
@@ -42,8 +36,9 @@ function content(){
     //var pNode = document.getElementById("content");
     const pNode = document.getElementById("text");
     //console.log(pNode);
-    const text = document.createTextNode(text_string[0]);
-    pNode.appendChild(text);
+    //const text = document.createTextNode(text_string[0]);
+    //pNode.appendChild(text);
+    pNode.innerHTML = "<p>" + text_string[0] + "</p>";
 }
 //new button
 //按鈕

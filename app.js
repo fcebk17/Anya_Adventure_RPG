@@ -66,6 +66,19 @@ app.get('/findAnyaGame', function (req, res){
     res.render('findAnyaGame', {'title': 'Anya大冒險RPG - 找安妮亞小遊戲'});
 });
 
+app.get('/yorIntro', function (req, res){
+    res.render('yorIntro', {'title': 'Anya大冒險RPG - 約兒自我介紹'});
+});
+app.get('/anyaOS', function (req, res){
+    res.render('anyaOS', {'title': 'Anya大冒險RPG - 安妮亞OS'});
+});
+app.get('/bondIntro', function (req, res){
+    res.render('bondIntro', {'title': 'Anya大冒險RPG - 彭德自我介紹'});
+});
+app.get('/WalkTheDog', function (req, res){
+    res.render('WalkTheDog', {'title': 'Anya大冒險RPG - 遛狗'});
+});
+
 app.get('/section1', function (req, res){
     res.render('section1', {'title': 'Anya大冒險RPG - 段落一'});
 });
