@@ -65,6 +65,7 @@ app.get('/loyidAward', function (req, res){
 app.get('/findAnyaGame', function (req, res){
     res.render('findAnyaGame', {'title': 'Anya大冒險RPG - 找安妮亞小遊戲'});
 });
+
 app.get('/yorIntro', function (req, res){
     res.render('yorIntro', {'title': 'Anya大冒險RPG - 約兒自我介紹'});
 });
@@ -77,5 +78,18 @@ app.get('/bondIntro', function (req, res){
 app.get('/WalkTheDog', function (req, res){
     res.render('WalkTheDog', {'title': 'Anya大冒險RPG - 遛狗'});
 });
+
+app.get('/section1', function (req, res){
+    res.render('section1', {'title': 'Anya大冒險RPG - 段落一'});
+});
+
+app.get('/section2', function (req, res){
+    res.render('section2', {'title': 'Anya大冒險RPG - 段落二'});
+});
+
+app.get('/levelMap', function (req, res){
+    res.render('levelMap', {'title': 'Anya大冒險RPG - 關卡地圖'});
+});
+
 app.listen(3000); // 設定 port 3000
 // 要用 axios.get

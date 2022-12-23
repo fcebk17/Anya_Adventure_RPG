@@ -43,8 +43,39 @@ function content(){
 //new button
 //按鈕
 function button(choose_button){
-    var MyDiv = document.getElementById(choose_button_string[choose_button]);
-    MyDiv.textContent = choose_button_value[choose_button];
+    var display = document.getElementById("display");
+    display.innerHTML += "<button id = 'button" + parseInt(counterButton+1) + "' class = 'button" + parseInt(counterButton+1) +"'>" +"<span class='ansbt'>"+ choose_button_value[choose_button]+"</span></button>";
     counterButton++;
 }
 body.addEventListener('keydown', spaceEvent, false);
+
+$(document).on('click', 'button', function(){
+    $("#button3").click(function(){
+        $(".getStar").css('display','block');
+        $(".getStar").html("您獲得一顆星星⭐<br>點擊畫面繼續遊戲 . . .");
+        $('.getStar').click(function() {
+            window.location.href = '/haveMeal';
+        });
+    });
+    $("#button1").click(function(){
+        $(".getStar").css('display','block');
+        $(".getStar").html("回答錯誤QAQ<br>點擊畫面繼續遊戲 . . .");
+        $('.getStar').click(function() {
+            window.location.href = '/haveMeal';
+        });
+    });
+    $("#button2").click(function(){
+        $(".getStar").css('display','block');
+        $(".getStar").html("回答錯誤QAQ<br>點擊畫面繼續遊戲 . . .");
+        $('.getStar').click(function() {
+            window.location.href = '/haveMeal';
+        });
+    });
+    $("#button4").click(function(){
+        $(".getStar").css('display','block');
+        $(".getStar").html("回答錯誤QAQ<br>點擊畫面繼續遊戲 . . .");
+        $('.getStar').click(function() {
+            window.location.href = '/haveMeal';
+        });
+    });
+});

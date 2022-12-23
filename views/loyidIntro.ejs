@@ -1,13 +1,22 @@
 <% layout('layout') %>
 <link rel="stylesheet" href="/css/buttonPage.css"/>
-<!--jQuery--> 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="/css/button.css"/>
+<link rel="stylesheet" href="/css/loyidIntro.css"/>
 <script src="/js/loyidIntro.js"></script>
-<div class="image">
+<script>
+    window.console = window.console || function(t) {};
+</script>
+<script>
+    if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+    }
+</script>
+<div class="image" id="display">
     <img src = "" width=100% id="dialog">
     <div class = "content" id="text" value = ""></div>
+    <!--
     <a href="/easyMath" class="button1"><button id="button1" value=""></button></a>
     <a href="/haveMeal" class="button2"><button id="button2" value=""></button></a>
     <a href="/hardMath" class="button3"><button id="button3" value=""></button></a>
-    <a href="/loyidAward" class="button4"><button id="button4" value=""></button></a>
+    <a href="/loyidAward" class="button4"><button id="button4" value=""></button></a>-->
 </div>

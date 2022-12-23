@@ -1,0 +1,33 @@
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/section1.css"/>
+<link rel="stylesheet" href="/css/button.css"/>
+<script src="/js/section1.js" ></script>
+<script>
+    window.console = window.console || function(t) {};
+</script>
+<script>
+    if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+    }
+</script>
+<div class="getStar">
+    您獲得一顆星星⭐<br>
+    點擊畫面繼續遊戲 . . .
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="slogan">
+            你對安妮亞太好了<br>
+            但作為父親不能這麼寵小孩哦
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-2 backlevelmap">
+            <a href="/levelMap"><button><span>回到關卡地圖</span></button></a>
+        </div>
+        <div class="col-5"></div>
+    </div>
+</div>
+
