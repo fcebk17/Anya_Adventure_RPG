@@ -5,11 +5,12 @@
 
 body {
     background-color: black;
-    background-image: url("/img/index.jpg");
+    background-image: url("/img/index.png");
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 div {
@@ -22,3 +23,14 @@ img {
     max-width: 20%;
     height: auto;
 }
+.animate__animated.animate__backInUp {
+    position:absolute;
+    --animate-duration: 2s;
+    font-family:fantasy;
+    font-size: 150px;
+    background-color: rgba(0,0,0,0.5);
+    color: palevioletred;
+    text-shadow: -5px 0 white, 0 5px white, 5px 0 white, 0 -5px white;
+    top:200%;
+    width: 100%;
+  }

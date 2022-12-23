@@ -57,7 +57,6 @@ function content(counter){
     */
 
     pNode.innerHTML = "<p>" + text_string[0] + "</p>";
-       
 }   
 
 //new button
