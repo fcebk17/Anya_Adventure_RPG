@@ -87,12 +87,28 @@ app.get('/yorAward', function (req, res){
     res.render('yorAward', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
 });
 
+app.get('/playWhere', function (req, res){
+    res.render('playWhere', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
+});
+
+app.get('/starExam', function (req, res){
+    res.render('starExam', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
+});
+
+app.get('/starExamPlus', function (req, res){
+    res.render('starExamPlus', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
+});
+
 app.get('/section1', function (req, res){
     res.render('section1', {'title': 'Anya大冒險RPG - 段落一'});
 });
 
 app.get('/section2', function (req, res){
     res.render('section2', {'title': 'Anya大冒險RPG - 段落二'});
+});
+
+app.get('/section3', function (req, res){
+    res.render('section3', {'title': 'Anya大冒險RPG - 段落二'});
 });
 
 app.get('/levelMap', function (req, res){
