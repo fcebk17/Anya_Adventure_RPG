@@ -79,6 +79,10 @@ app.get('/WalkTheDog', function (req, res){
     res.render('WalkTheDog', {'title': 'Anya大冒險RPG - 遛狗'});
 });
 
+app.get('/enjoyMusic', function (req, res){
+    res.render('enjoyMusic', {'title': 'Anya大冒險RPG - 聽音樂放鬆'});
+});
+
 app.get('/yorAward', function (req, res){
     res.render('yorAward', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
 });
