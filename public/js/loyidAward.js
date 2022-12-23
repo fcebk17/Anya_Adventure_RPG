@@ -49,8 +49,8 @@ function content(){
 //new button
 //按鈕
 function button(choose_button){
-    var MyDiv = document.getElementById(choose_button_string[choose_button]);
-    MyDiv.textContent = choose_button_value[choose_button];
+    var display = document.getElementById("display");
+    display.innerHTML += "<a href = '/section1'><button id = 'button" + parseInt(counterButton+1) + "' class = 'button" + parseInt(counterButton+1) +"'>" +"<span class='ansbt'>"+ choose_button_value[choose_button]+"</span></button></a>";
     counterButton++;
 }
 body.addEventListener('keydown', spaceEvent, false);

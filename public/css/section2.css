@@ -30,3 +30,8 @@ body {
     position: static;
     z-index: 1;
 }
+
+button {
+    background-color: rgba(43, 42, 42, 0.58);
+    border: 3px solid rgba(22, 76, 167, 0.6);
+}

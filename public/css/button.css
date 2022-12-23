@@ -28,8 +28,8 @@ button {
   height: 60px;
   width: 210px;
   opacity: 1;
-  background-color: rgba(43, 42, 42, 0.58);
-  border: 3px solid rgba(22, 76, 167, 0.6);
+  /*background-color: rgba(43, 42, 42, 0.58);
+  border: 3px solid rgba(22, 76, 167, 0.6);*/
 }
 button span {
   color:white;
