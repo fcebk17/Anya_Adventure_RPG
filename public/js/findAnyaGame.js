@@ -9,7 +9,7 @@ $(document).ready(function(){
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
-            window.alert("您贏了");
+            $("#myAlertModal").modal('show');
         }
     });
     
@@ -18,7 +18,7 @@ $(document).ready(function(){
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
-            window.alert("您贏了");
+            $("#myAlertModal").modal('show');
         }
     });
     
@@ -27,7 +27,7 @@ $(document).ready(function(){
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
-            window.alert("您贏了");
+            $("#myAlertModal").modal('show');
         }
     });
     
@@ -36,7 +36,7 @@ $(document).ready(function(){
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
-            window.alert("您贏了");
+            $("#myAlertModal").modal('show');
         }
     });
     
@@ -45,7 +45,7 @@ $(document).ready(function(){
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
             console.log("congragulations");
-            window.alert("您贏了");
+            $("#myAlertModal").modal('show');
         }
     });
 });
