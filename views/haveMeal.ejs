@@ -1,13 +1,36 @@
 <% layout('layout') %>
 <link rel="stylesheet" href="/css/buttonPage.css"/>
-<!--jQuery--> 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="/css/button.css"/>
+<link rel="stylesheet" href="/css/modal.css"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 <script src="/js/haveMeal.js"></script>
-<div class="image">
+<script>
+    window.console = window.console || function(t) {};
+</script>
+<script>
+    if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+    }
+</script>
+<div class="getStar"></div>
+<div class="image" id="display">
     <img src = "" width=100% id="dialog">
-    <div class = "content" id="text" value = ""></div>
-    <a href="/loader" class="button1"><button id="button1" value=""></button></a>
-    <a href="/loader" class="button2"><button id="button2" value=""></button></a>
-    <a href="/loader" class="button3"><button id="button3" value=""></button></a>
-    <a href="/loader" class="button4"><button id="button4" value=""></button></a>
+    <div class = "content" id="text" value = ""></div>    
+</div>
+
+<div class="modal " data-backdrop="static" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content modalwidth">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modaltitle">舶食日式丼飯、串燒</h5>
+            </div>
+            <div class="modal-body">
+                <iframe id="myiframe" src="https://reurl.cc/x1421e" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="modal-footer">
+                <a href="/yorIntro"><button type="button" class="txtsize">繼續遊戲</button></a>
+                <a href="/levelMap"><button type="button" class="txtsize">回到關卡地圖</button></a>
+            </div>
+        </div>
+    </div>
 </div>
