@@ -32,6 +32,6 @@ body {
 }
 
 button {
-    background-color: rgba(43, 42, 42, 0.58);
-    border: 3px solid rgba(22, 76, 167, 0.6);
+    background-color: rgba(43, 42, 42, 0.85);
+    border: 3px solid rgba(223, 119, 172, 0.6);
 }
