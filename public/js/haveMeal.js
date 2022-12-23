@@ -44,7 +44,7 @@ function content(){
     //console.log(pNode);
     //const text = document.createTextNode(text_string[0]);
     //pNode.appendChild(text);
-    pNode.innerHTML = "<p>" + text_string_now[0] + "</p>";
+    pNode.innerHTML = "<p>" + text_string[0] + "</p>";
 }
 //new button
 //按鈕
