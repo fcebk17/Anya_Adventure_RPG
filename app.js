@@ -59,7 +59,7 @@ app.get('/haveMeal', function (req, res){
     res.render('haveMeal', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 吃飯'});
 });
 app.get('/loyidAward', function (req, res){
-    res.render('loyidAward', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 給獎勵'});
+    res.render('loyidAward', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 把拔給獎勵'});
 });
 
 app.get('/findAnyaGame', function (req, res){
@@ -77,6 +77,10 @@ app.get('/bondIntro', function (req, res){
 });
 app.get('/WalkTheDog', function (req, res){
     res.render('WalkTheDog', {'title': 'Anya大冒險RPG - 遛狗'});
+});
+
+app.get('/yorAward', function (req, res){
+    res.render('yorAward', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
 });
 
 app.get('/section1', function (req, res){
