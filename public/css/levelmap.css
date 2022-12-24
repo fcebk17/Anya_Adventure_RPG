@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    background-image: url("/img/levelmap/levelmap.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+label {
+    color:white;
+}
+
+h1 {
+    color:white;
+    font-size: 56px;
+}
