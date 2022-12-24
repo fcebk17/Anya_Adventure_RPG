@@ -39,7 +39,6 @@ h1 {
     position:fixed;
     bottom:2%;
     right:2%;
-    filter: brightness(20%);
 }
 
 .end:hover::after {
@@ -52,4 +51,8 @@ h1 {
     padding: 5px;
     border-radius: 5px;
     content: '點看看吧(・ω・)ノ';
+}
+
+#modalbody {
+    color:black;
 }
