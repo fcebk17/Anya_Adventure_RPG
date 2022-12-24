@@ -88,15 +88,7 @@ app.get('/yorAward', function (req, res){
 });
 
 app.get('/playWhere', function (req, res){
-    res.render('playWhere', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
-});
-
-app.get('/starExam', function (req, res){
-    res.render('starExam', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
-});
-
-app.get('/starExamPlus', function (req, res){
-    res.render('starExamPlus', {'title': 'Anya大冒險RPG - 安妮亞回答問題 - 馬麻給獎勵'});
+    res.render('playWhere', {'title': 'Anya大冒險RPG - 彭德去哪玩鴨'});
 });
 
 app.get('/section1', function (req, res){
