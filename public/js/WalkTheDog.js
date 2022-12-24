@@ -19,6 +19,11 @@ function spaceEvent(e) {
             console.log(counter);
         }
         else{
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star5: 1}
+            });
             $("#myAlertModal").modal('show');
             $(".getStar").hide().fadeIn(500).fadeOut(2500);
             clearTimeout(timer);

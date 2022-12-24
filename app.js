@@ -1,5 +1,7 @@
 const express = require('express');   // 載入express模組
 const engine = require('ejs-locals'); // 載入ejs-locals 模組
+const fs = require('fs');
+const bodyParser = require('body-parser');
 
 const app = express();                // 使用express
 
@@ -10,6 +12,9 @@ const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology:
 app.engine('ejs', engine);          
 app.set('views', './views');        // 將目的地 folder 設為 views
 app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
 
 app.use(express.static('public'));                        // build virtual path
 app.use('/js', express.static(__dirname + '/js'));        // build absolute path
@@ -24,11 +29,32 @@ app.get('/', function (req, res) {                      // build router for page
         if (err) throw err;
         const dbo = db.db("mydb");
         let user_id = Date.now();
-    
-        let myobj = { user_id: user_id, star1: false, star2: false, star3: false, star4: false, star5: false, star6: false, star7: false, star8: false,  }
+        let data = { user_id: user_id};
+        fs.writeFileSync('userStory.json', JSON.stringify(data));
+        console.log(data);
+
+        let myobj = { user_id: user_id, star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
         dbo.collection("user_story").insertOne(myobj, function (err, res) {
             if (err) throw err;
             console.log("1 document inserted");
+            db.close();
+        });
+    });
+});
+
+app.post('/saveUserStory', (req, res) => {
+    const dt = JSON.parse(fs.readFileSync('userStory.json'));
+    const query = dt.user_id;
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        const dbo = db.db("mydb");
+        const myquery = { user_id: query };
+        const data = req.body;
+        console.log(data);
+        const newvalues = { $set: data };
+        dbo.collection("user_story").updateOne(myquery, newvalues, function (err, res) {
+            if (err) throw err;
+            console.log("1 document updated");
             db.close();
         });
     });

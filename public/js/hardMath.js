@@ -54,6 +54,11 @@ $(document).on('click', 'button', function(){
         $(".getStar").css('display','block');
         $(".getStar").html("您獲得一顆星星⭐<br>點擊畫面繼續遊戲 . . .");
         $('.getStar').click(function() {
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star2: 1}
+            });
             window.location.href = '/haveMeal';
         });
     });

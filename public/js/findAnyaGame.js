@@ -8,7 +8,11 @@ $(document).ready(function(){
         score[0]=true;
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
-            console.log("congragulations");
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star4: 1}
+            });
             $("#myAlertModal").modal('show');
             $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
@@ -18,7 +22,11 @@ $(document).ready(function(){
         score[1]=true;
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
-            console.log("congragulations");
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star4: 1}
+            });
             $("#myAlertModal").modal('show');
             $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
@@ -28,7 +36,11 @@ $(document).ready(function(){
         score[2]=true;
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
-            console.log("congragulations");
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star4: 1}
+            });
             $("#myAlertModal").modal('show');
             $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
@@ -38,7 +50,11 @@ $(document).ready(function(){
         score[3]=true;
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
-            console.log("congragulations");
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star4: 1}
+            });
             $("#myAlertModal").modal('show');
             $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
@@ -48,7 +64,11 @@ $(document).ready(function(){
         score[4]=true;
         $(this).css('border', '5px solid red');
         if(score[0]==true && score[1]==true && score[2]==true && score[3]==true && score[4]==true){
-            console.log("congragulations");
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star4: 1}
+            });
             $("#myAlertModal").modal('show');
             $(".getStar").hide().fadeIn(500).fadeOut(2500);
         }
