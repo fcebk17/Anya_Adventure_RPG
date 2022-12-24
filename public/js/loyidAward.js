@@ -5,7 +5,7 @@ var choose_button_string = ["button1","button2","button3","button4"];
 var choose_button_value = ["糖果","胡蘿蔔汁","看電視","花生"];
 var text_string = ["爸爸給我一些東西作為讀書的獎勵，好像很不錯….要選擇什麼東西呢？有點猶豫耶……"];
 
-$('body').css('background-image','url(/img/livingroom.jpg)');
+$('body').css('background-image','url(/img/loyidAward.jpg)');
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:
