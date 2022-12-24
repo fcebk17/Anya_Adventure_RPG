@@ -35,6 +35,16 @@ $(document).ready(function(){
             if (star8==0){
                 $('#star8').css('filter', 'brightness(20%)');
             }
+            if(star1==1 && star2==1 && star3==1 && star4==1 && star5==1 && star6==1 && star7==1 && star8==1){
+                console.log("success");
+                $("#modaltitle").html("得到8顆星星了鴨，哇庫哇庫(′゜ω。‵)⭐");
+                $("#modalbody").html("來看看得到甚麼獎勵拔!");
+                $("#finallink").attr('href', '/finalPage');
+                $("#finalbt").text("成為星光安妮亞⭐");
+            }
+            $(".level").click(function(){
+                $('#myModal').modal('show');
+            });
         }
     });
 })

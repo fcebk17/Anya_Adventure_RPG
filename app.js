@@ -30,7 +30,6 @@ app.get('/', function (req, res) {                      // build router for page
         let user_id = Date.now();
         let data = { user_id: user_id};
         fs.writeFileSync('userStory.json', JSON.stringify(data));
-        console.log(data);
 
         let myobj = { user_id: user_id, star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
         dbo.collection("user_story").insertOne(myobj, function (err, res) {
@@ -49,7 +48,6 @@ app.post('/saveUserStory', function (req, res) {
         const dbo = db.db("mydb");
         const myquery = { user_id: query };
         const data = req.body;
-        console.log(data);
         const newvalues = { $set: data };
         dbo.collection("user_story").updateOne(myquery, newvalues, function (err, res) {
             if (err) throw err;
