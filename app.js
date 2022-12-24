@@ -112,5 +112,11 @@ app.get('/starExam', function (req, res){
 app.get('/starExamPlus', function (req, res){
     res.render('starExamPlus', {'title': 'Anya大冒險RPG - 星力考驗(Plus+)'});
 });
+app.get('/finalPage', function (req, res){
+    res.render('finalPage', {'title': 'Anya大冒險RPG - 結局'});
+});
+app.get('/finalVideo', function (req, res){
+    res.render('finalVideo', {'title': 'Anya大冒險RPG - 結局影片'});
+});
 app.listen(3000); // 設定 port 3000
 // 要用 axios.get
