@@ -3,9 +3,9 @@ var counter = 0;
 var counterButton = 0;
 var choose_button_string = ["button1","button2","button3","button4"];
 var choose_button_value = ["星野源-喜劇","Mixed Nuts","yama-色彩","SOUVENIR"];
-var text_string = ["該聽甚麼音樂好呢~~~"];
+var text_string = ["哇！安妮亞今天好像很累，這麼快已經睡著了@@感覺可以跟她小小的休息一下，要聽甚麼音樂呢~~~，有點期待呢(最近好多好聽的音樂₍₍٩( ᐛ )۶₎₎♪)"];
 
-$('body').css('background-image','url(/img/livingroom.jpg)');
+$('body').css('background-image','url(/img/enjoyMusic.jpg)');
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:
@@ -26,16 +26,10 @@ function spaceEvent(e) {
         break;
     }
 }
-//頁面1
-function start(){
-    $('body').css('background-image','url(/img/livingroom.jpg)');
-    //console.log("start");
-}
-
 //頁面2(對話框)
 function dialog(){
     var image=document.getElementById("dialog");
-    image.setAttribute("src", "/img/dialogAnya.png");
+    image.setAttribute("src", "/img/dialog-yor.png");
 }
 //對話文字
 function content(){

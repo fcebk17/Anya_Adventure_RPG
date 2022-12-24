@@ -2,10 +2,10 @@ var body = document.querySelector("body");
 var counter = 0;
 var counterButton = 0;
 var choose_button_string = ["button1","button2","button3","button4"];
-var choose_button_value = ["糖果","胡蘿蔔汁","看電視","花生"];
-var text_string = ["馬麻給我一些東西作為讀書的獎勵，好像很不錯….要選擇什麼東西呢？有點猶豫耶……"];
+var choose_button_value = ["玩扮家家酒","洋芋片","找爸比喝汽水","跟馬麻去逛逛"];
+var text_string = ["馬麻說我有好好去上學，可以給我一些好吃或好玩的東西，還是要玩扮家家酒呢？欸咦！？爸比去哪裡了，好想他鴨QWQ"];
 
-$('body').css('background-image','url(/img/livingroom.jpg)');
+$('body').css('background-image','url(/img/yoraWard.jpg)');
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:
@@ -28,7 +28,7 @@ function spaceEvent(e) {
 }
 //頁面1
 function start(){
-    $('body').css('background-image','url(/img/livingroom.jpg)');
+    $('body').css('background-image','url(/img/yoraWard.jpg)');
     console.log("start");
 }
 

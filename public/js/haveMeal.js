@@ -5,7 +5,7 @@ var choose_button_string = ["button1","button2","button3","button4"];
 var choose_button_value = ["生魚片","牛肉麵","芒果冰","水餃"];
 var text_string = ["算數學到肚子好餓鴨！終於可以休息了～爸爸今天不煮飯問我要吃什麼，那我們要去吃什麼呢（好興奮⌓‿⌓)"];
 
-$('body').css('background-image','url(/img/livingroom.jpg)');
+$('body').css('background-image','url(/img/haveMeal.jpg)');
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:

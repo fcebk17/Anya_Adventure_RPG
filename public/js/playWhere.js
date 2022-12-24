@@ -3,9 +3,9 @@ var counter = 0;
 var counterButton = 0;
 var choose_button_string = ["button1","button2","button3","button4"];
 var choose_button_value = ["潮境公園","外木山沙灘","望幽谷","海洋廣場"];
-var text_string = ["汪....汪汪....汪.......................(快告訴我哪裡很好玩(=´ᴥ`))"];
+var text_string = ["汪....汪汪....汪.......................(快告訴我哪裡很好玩(=´ᴥ`)不要看我肥宅樣，我可是很會跑步ㄉ，上次還帶著安妮亞被敵人追殺，快稱讚我̋(๑˃́ꇴ˂̀๑))"];
 
-$('body').css('background-image','url(/img/bondIntro.png)');
+$('body').css('background-image','url(/img/playWhere.jpg)');
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:
