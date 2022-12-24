@@ -1,5 +1,7 @@
 const express = require('express');   // 載入express模組
 const engine = require('ejs-locals'); // 載入ejs-locals 模組
+const fs = require('fs');
+const bodyParser = require('body-parser');
 
 const app = express();                // 使用express
 
@@ -11,12 +13,14 @@ app.engine('ejs', engine);
 app.set('views', './views');        // 將目的地 folder 設為 views
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
+
 app.use(express.static('public'));                        // build virtual path
 app.use('/js', express.static(__dirname + '/js'));        // build absolute path
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/music', express.static(__dirname + '/music'));
-
 
 app.get('/', function (req, res) {                      // build router for pages
     res.render('index', {'title': 'Anya大冒險RPG'});    // return index.ejs and title
@@ -24,14 +28,50 @@ app.get('/', function (req, res) {                      // build router for page
         if (err) throw err;
         const dbo = db.db("mydb");
         let user_id = Date.now();
-    
-        let myobj = { user_id: user_id, star1: false, star2: false, star3: false, star4: false, star5: false, star6: false, star7: false, star8: false,  }
+        let data = { user_id: user_id};
+        fs.writeFileSync('userStory.json', JSON.stringify(data));
+        console.log(data);
+
+        let myobj = { user_id: user_id, star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
         dbo.collection("user_story").insertOne(myobj, function (err, res) {
             if (err) throw err;
             console.log("1 document inserted");
             db.close();
         });
     });
+});
+
+app.post('/saveUserStory', function (req, res) {
+    const dt = JSON.parse(fs.readFileSync('userStory.json'));
+    const query = dt.user_id;
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        const dbo = db.db("mydb");
+        const myquery = { user_id: query };
+        const data = req.body;
+        console.log(data);
+        const newvalues = { $set: data };
+        dbo.collection("user_story").updateOne(myquery, newvalues, function (err, res) {
+            if (err) throw err;
+            console.log("1 document updated");
+            db.close();
+        });
+    });
+});
+
+app.get('/getUserStory', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        const dt = JSON.parse(fs.readFileSync('userStory.json'));
+        const userId = dt.user_id;
+        const dbo = db.db('mydb');
+        const query = { user_id: userId };
+        dbo.collection("user_story").find(query).toArray(function (err, result) {
+          if (err) throw err;
+          res.send(result);
+          db.close();
+        });
+      });
 });
 
 app.get('/loader', function (req, res) {
