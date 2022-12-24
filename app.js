@@ -114,6 +114,11 @@ app.get('/section3', function (req, res){
 app.get('/levelMap', function (req, res){
     res.render('levelMap', {'title': 'Anya大冒險RPG - 關卡地圖'});
 });
-
+app.get('/starExam', function (req, res){
+    res.render('starExam', {'title': 'Anya大冒險RPG - 星力考驗'});
+});
+app.get('/starExamPlus', function (req, res){
+    res.render('starExamPlus', {'title': 'Anya大冒險RPG - 星力考驗(Plus+)'});
+});
 app.listen(3000); // 設定 port 3000
 // 要用 axios.get
