@@ -39,6 +39,7 @@ h1 {
     position:fixed;
     bottom:2%;
     right:2%;
+    filter: brightness(20%);
 }
 
 .end:hover::after {

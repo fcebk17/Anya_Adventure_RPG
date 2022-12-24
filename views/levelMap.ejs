@@ -1,5 +1,9 @@
 <% layout('layout') %>
 <link rel="stylesheet" href="/css/levelmap.css"/>
+<script src="/js/levelMap.js"></script>
+<script language="JavaScript">
+    setTimeout(function(){location.reload()},1000); //指定1秒刷新一次
+</script>
 <div class="container">
     <br>
     <div class="row">
@@ -10,13 +14,13 @@
         <div class="col"></div>
         <div class="col">
             <label>算數學 - 簡單</label>
-            <a href="/easyMath"><img class="level" src="/img/levelmap/2easymath.png"></a>
+            <a href="/easyMath"><img id="star1" class="level" src="/img/levelmap/2easymath.png"></a>
         </div>
         <div class="col-1"></div>
         <div class="col"></div>
         <div class="col">
             <label>你找不到安妮亞</label>
-            <a href="/findAnyaGame"><img class="level" src="/img/levelmap/6anyaos.png"></a>
+            <a href="/findAnyaGame"><img id="star4" class="level" src="/img/levelmap/6anyaos.png"></a>
         </div>
         <div class="col-1"></div>
         <div class="col"></div>
@@ -33,7 +37,7 @@
         </div>
         <div class="col">
             <label>算數學 - 困難</label>
-            <a href="/hardMath"><img class="level" src="/img/levelmap/3hardmath.png"></a>
+            <a href="/hardMath"><img id="star2" class="level" src="/img/levelmap/3hardmath.png"></a>
         </div>
         <div class="col-1">
             <label></label>
@@ -45,7 +49,7 @@
         </div>
         <div class="col">
             <label>遛彭德</label>
-            <a href=/WalkTheDog><img class="level" src="/img/levelmap/7walkdog.png"></a>
+            <a href=/WalkTheDog><img id="star5" class="level" src="/img/levelmap/7walkdog.png"></a>
         </div>
         <div class="col-1">
             <label></label>
@@ -57,7 +61,7 @@
         </div>
         <div class="col">
             <label>星力考驗</label>
-            <a href="/starExam"><img class="level" src="/img/levelmap/11starexam.png"></a>
+            <a href="/starExam"><img id="star7" class="level" src="/img/levelmap/11starexam.png"></a>
         </div>
     </div>
     <br>
@@ -65,19 +69,19 @@
         <div class="col"></div>
         <div class="col">
             <label>洛伊德給獎勵</label>
-            <a href="/loyidAward"><img class="level" src="/img/levelmap/4loyidaward.png"></a>
+            <a href="/loyidAward"><img id="star3" class="level" src="/img/levelmap/4loyidaward.png"></a>
         </div>
         <div class="col-1"></div>
         <div class="col"></div>
         <div class="col">
             <label>約兒給獎勵</label>
-            <a href="/yorAward"><img class="level" src="/img/levelmap/8yoraward.png"></a>
+            <a href="/yorAward"><img id="star6" class="level" src="/img/levelmap/8yoraward.png"></a>
         </div>
         <div class="col-1"></div>
         <div class="col"></div>
         <div class="col">
             <label>星力考驗(plus+)</label>
-            <a href="/starExamPlus"><img class="level" src="/img/levelmap/12starexamplus.png"></a>
+            <a href="/starExamPlus"><img id="star8" class="level" src="/img/levelmap/12starexamplus.png"></a>
         </div>
     </div>
 </div>

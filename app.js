@@ -22,7 +22,6 @@ app.use('/css', express.static(__dirname + '/css'));
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/music', express.static(__dirname + '/music'));
 
-
 app.get('/', function (req, res) {                      // build router for pages
     res.render('index', {'title': 'Anya大冒險RPG'});    // return index.ejs and title
     MongoClient.connect(url, function (err, db) {
@@ -42,7 +41,7 @@ app.get('/', function (req, res) {                      // build router for page
     });
 });
 
-app.post('/saveUserStory', (req, res) => {
+app.post('/saveUserStory', function (req, res) {
     const dt = JSON.parse(fs.readFileSync('userStory.json'));
     const query = dt.user_id;
     MongoClient.connect(url, function (err, db) {
@@ -58,6 +57,21 @@ app.post('/saveUserStory', (req, res) => {
             db.close();
         });
     });
+});
+
+app.get('/getUserStory', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        const dt = JSON.parse(fs.readFileSync('userStory.json'));
+        const userId = dt.user_id;
+        const dbo = db.db('mydb');
+        const query = { user_id: userId };
+        dbo.collection("user_story").find(query).toArray(function (err, result) {
+          if (err) throw err;
+          res.send(result);
+          db.close();
+        });
+      });
 });
 
 app.get('/loader', function (req, res) {
