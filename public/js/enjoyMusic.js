@@ -1,3 +1,7 @@
+var audio = document.getElementById("myAudio");
+audio.volume = 0.3;
+audio.currentTime = 26;  // 跳到最後五秒
+audio.play();  // 播放
 var body = document.querySelector("body");
 var counter = 0;
 var counterButton = 0;
@@ -57,21 +61,25 @@ $(document).on('click', 'button', function(){
         $("#modaltitle").html("星野源 - 喜劇");
         $('#myiframe').attr('src','https://www.youtube.com/embed/nRKJBpFFsuI');
         $('#myModal').modal('show');
+        audio.pause();
     });
     $("#button2").click(function(){
         console.log("mixed nuts");
         $("#modaltitle").html("Mixed Nuts");
         $('#myiframe').attr('src','https://www.youtube.com/embed/U_rWZK_8vUY')
         $('#myModal').modal('show');
+        audio.pause();
     });
     $("#button3").click(function(){
         $("#modaltitle").html("yama - 色彩");
         $('#myiframe').attr('src','https://www.youtube.com/embed/4kNt62PptEQ')
         $('#myModal').modal('show');
+        audio.pause();
     });
     $("#button4").click(function(){
         $("#modaltitle").html("SOUVENIR");
         $('#myiframe').attr('src','https://www.youtube.com/embed/YOIJOJsUkUg')
         $('#myModal').modal('show');
+        audio.pause();
     });
 });

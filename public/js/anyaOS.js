@@ -1,3 +1,12 @@
+var audio = document.getElementById("myAudio");
+audio.volume = 1;
+audio.currentTime = 118;  // 跳到最後五秒
+setTimeout(Stop,2000);
+function Stop(){
+    audio.pause();  // 播放
+}
+
+audio.play();  // 播放
 var body = document.querySelector("body");
 var temp = 0;
 var text_string = ["哼！才不可能讓媽媽那麼容易找到，我可是星光安妮亞～～～"];

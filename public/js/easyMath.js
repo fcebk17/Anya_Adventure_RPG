@@ -1,3 +1,6 @@
+var audio = document.getElementById("myAudio");
+audio.volume = 1;
+audio.play();  // 播放
 var body = document.querySelector("body");
 var counter = 0;
 var counterButton = 0;

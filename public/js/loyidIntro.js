@@ -1,4 +1,5 @@
 var audio = document.getElementById("myAudio");
+audio.volume = 0.25;
 audio.currentTime = 120;  // 跳到最後五秒
 audio.play();  // 播放
 var body = document.querySelector("body");
