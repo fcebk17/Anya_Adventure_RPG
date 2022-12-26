@@ -10,6 +10,13 @@ function Play(){
     audio.play(); 
     audio.currentTime = 160;  // 跳到最後五秒
 }
+
+$.ajax({
+    url: '/saveUserStory',
+    type: 'POST',
+    data: {star3: 1}
+});
+
 $("body").click(function(){
     $(".getStar").hide();
     clearInterval(intervalId);
@@ -21,9 +28,4 @@ $("body").click(function(){
 
 $(document).ready(function() {
     $(".getStar").hide().fadeIn(500);
-    $.ajax({
-        url: '/saveUserStory',
-        type: 'POST',
-        data: {star3: 1}
-    });
 });
