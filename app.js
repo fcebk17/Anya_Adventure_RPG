@@ -19,10 +19,11 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
 app.use(express.static('public'));                        // build virtual path
-app.use('/js', express.static(__dirname + '/js'));        // build absolute path
-app.use('/css', express.static(__dirname + '/css'));
-app.use('/img', express.static(__dirname + '/img'));
-app.use('/music', express.static(__dirname + '/music'));
+//app.use('/js', express.static(__dirname + '/js'));        // build absolute path
+app.use(express.static(__dirname + '/js'));
+app.use(express.static(__dirname + '/css'));
+app.use(express.static(__dirname + '/img'));
+app.use(express.static(__dirname + '/music'));
 
 app.get('/', function (req, res) {                      // build router for pages
     res.render('index', {'title': 'Anya大冒險RPG'});    // return index.ejs and title
