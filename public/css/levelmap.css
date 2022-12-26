@@ -56,3 +56,7 @@ h1 {
 #modalbody {
     color:black;
 }
+
+#star1, #star2, #star3, #star4, #star5, #star6, #star7, #star8 {
+    filter: brightness(20%);
+}
