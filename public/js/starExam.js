@@ -7,7 +7,7 @@ var counter = 0;
 var counterButton = 0;
 var choose_button_string = ["button1","button2","button3","button4"];
 var choose_button_value = ["間諜過家家","我的間諜家庭","間諜家家酒","間諜佛傑"];
-var text_string = ["SPY×FAMILY，是由一名身分為間諜的男性，和另一位實際工作是殺手的女性，以及一個能讀心的超能力者女孩組成，三人互相隱瞞真實身分所組成的虛假家庭間的家庭喜劇。請問此作品的台灣翻譯為何？"];
+var text_string = ["SPY×FAMILY，是由一名身分為間諜的男性，和另一位實際工作是殺手的女性，與一個能讀心的超能力者女孩組成，三人互相隱瞞真實身分所組成的虛假家庭的家庭喜劇。請問此作品的台灣翻譯為何？"];
 
 $('body').css('background-image','url(/img/starExam.png)');
 function spaceEvent(e) {
