@@ -1,3 +1,7 @@
+var audio = document.getElementById("myAudio");
+audio.volume = 0.1;
+audio.currentTime = 19;  // 跳到最後五秒
+audio.play();  // 播放
 $("body").click(function(){
     $(".slogan").hide();
 });

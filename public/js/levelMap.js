@@ -1,3 +1,7 @@
+var audio = document.getElementById("myAudio");
+audio.volume = 0.35;
+audio.currentTime = 70;  // 跳到最後五秒
+audio.play();  // 播放
 $.ajax({
     url: '/getUserStory',
     type: 'GET',
