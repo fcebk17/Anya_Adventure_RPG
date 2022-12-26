@@ -9,19 +9,23 @@ var body = document.querySelector("body");
 var counter =10;
 var temp = 0;
 let timer;
+let first_win;
+const WIN_COUNTER = 60;
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:
         if(temp == 0){
             timer = setTimeout(stopActivity, 5000);
             temp++;
+            first_win=false;
         }   
-        if(counter<55){
+        if(counter<WIN_COUNTER){
             counter += Math.floor(Math.random()*5);
             $('#image1').css('left',counter.toString()+"%");
             console.log(counter);
         }
-        else{
+        else if(!first_win && counter >= WIN_COUNTER){
+            first_win = true;
             $.ajax({
                 url: '/saveUserStory',
                 type: 'POST',
