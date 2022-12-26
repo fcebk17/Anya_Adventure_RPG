@@ -45,6 +45,11 @@ $.ajax({
             $("#modalbody").html("來看看得到甚麼獎勵拔!");
             $("#finallink").attr('href', '/finalPage');
             $("#finalbt").text("成為星光安妮亞⭐");
+            $.ajax({
+                url: '/saveUserStory',
+                type: 'POST',
+                data: {star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
+            });
         }
         $(".level").click(function(){
             $('#myModal').modal('show');
