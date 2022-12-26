@@ -5,7 +5,7 @@ audio.play();  // 播放
 
 var counter = 0;
 $(document).ready(function(){
-    $("html").click(function(){
+    $("#text").click(function(){
         window.location.href = "/loader";
         console.log("counter=1");
     });
