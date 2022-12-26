@@ -32,8 +32,8 @@ app.get('/', function (req, res) {                      // build router for page
         let user_id = Date.now();
         let data = { user_id: user_id};
         user_data = data;
-        fs.writeFileSync('userStory.json', JSON.stringify(data)); // switch to no sync function
-
+        console.log(user_data);
+        //fs.writeFileSync('userStory.json', JSON.stringify(data)); // switch to no sync function
         let myobj = { user_id: user_id, star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
         dbo.collection("user_story").insertOne(myobj, function (err, res) {
             if (err) throw err;
@@ -44,10 +44,10 @@ app.get('/', function (req, res) {                      // build router for page
 });
 
 app.post('/saveUserStory', function (req, res) {
-    let dt;
-    if ( user_data === undefined || user_data === null  )
-        dt = JSON.parse(fs.readFileSync('userStory.json'));
-    else dt = user_data;
+    let dt = user_data;
+    //if ( user_data === undefined || user_data === null  )
+    //    dt = JSON.parse(fs.readFileSync('userStory.json'));
+    //else 
     const query = dt.user_id;
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
@@ -65,11 +65,11 @@ app.post('/saveUserStory', function (req, res) {
 
 app.get('/getUserStory', function (req, res) {
     MongoClient.connect(url, function(err, db) {
-        let dt;
+        let dt = user_data;
         if (err) throw err;
-        if ( user_data === undefined || user_data === null )
-            dt = JSON.parse(fs.readFileSync('userStory.json'));
-        else dt = user_data;
+        //if ( user_data === undefined || user_data === null )
+        //    dt = JSON.parse(fs.readFileSync('userStory.json'));
+        //else dt = user_data;
         const userId = dt.user_id;
         const dbo = db.db('mydb');
         const query = { user_id: userId };
@@ -79,6 +79,24 @@ app.get('/getUserStory', function (req, res) {
           db.close();
         });
       });
+});
+
+app.post('/delUserStory', function (req, res) {
+    let dt = user_data;
+    const query = dt.user_id;
+    console.log(dt.user_id);
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        const dbo = db.db("mydb");
+        const myquery = { user_id: query };
+        const data = { star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0};
+        const newvalues = { $set: data };
+        dbo.collection("user_story").updateOne(myquery, newvalues, function (err, res) {
+            if (err) throw err;
+            console.log("All document updated");
+            db.close();
+        });
+    });
 });
 
 app.get('/loader', function (req, res) {
