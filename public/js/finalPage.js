@@ -9,7 +9,6 @@ function win(){
     setTimeout(vedio,7500);
 }
 function vedio(){
-
     window.location.href = "/finalvideo";
 }
 
