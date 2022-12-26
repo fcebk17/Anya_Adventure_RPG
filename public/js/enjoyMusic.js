@@ -9,7 +9,7 @@ var choose_button_string = ["button1","button2","button3","button4"];
 var choose_button_value = ["星野源-喜劇","Mixed Nuts","yama-色彩","SOUVENIR"];
 var text_string = ["哇！安妮亞今天好像很累，這麼快已經睡著了@@感覺可以跟她小小的休息一下，要聽甚麼音樂呢~~~，有點期待呢(最近好多好聽的音樂₍₍٩( ᐛ )۶₎₎♪)"];
 
-$('body').css('background-image','url(/img/enjoyMusic.jpg)');
+$('body').css('background-image','url(/img/music.jpg)');
 function spaceEvent(e) {
     switch (e.keyCode) {
     case 32:
