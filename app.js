@@ -9,6 +9,8 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const url = "mongodb+srv://fcebk17:admin@cluster0.ljwk5az.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
+let user_data;
+
 app.engine('ejs', engine);          
 app.set('views', './views');        // 將目的地 folder 設為 views
 app.set('view engine', 'ejs');
@@ -29,7 +31,8 @@ app.get('/', function (req, res) {                      // build router for page
         const dbo = db.db("mydb");
         let user_id = Date.now();
         let data = { user_id: user_id};
-        fs.writeFileSync('userStory.json', JSON.stringify(data));
+        user_data = data;
+        fs.writeFileSync('userStory.json', JSON.stringify(data)); // switch to no sync function
 
         let myobj = { user_id: user_id, star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
         dbo.collection("user_story").insertOne(myobj, function (err, res) {
@@ -41,7 +44,10 @@ app.get('/', function (req, res) {                      // build router for page
 });
 
 app.post('/saveUserStory', function (req, res) {
-    const dt = JSON.parse(fs.readFileSync('userStory.json'));
+    let dt;
+    if ( user_data === undefined || user_data === null  )
+        dt = JSON.parse(fs.readFileSync('userStory.json'));
+    else dt = user_data;
     const query = dt.user_id;
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
@@ -59,8 +65,11 @@ app.post('/saveUserStory', function (req, res) {
 
 app.get('/getUserStory', function (req, res) {
     MongoClient.connect(url, function(err, db) {
+        let dt;
         if (err) throw err;
-        const dt = JSON.parse(fs.readFileSync('userStory.json'));
+        if ( user_data === undefined || user_data === null )
+            dt = JSON.parse(fs.readFileSync('userStory.json'));
+        else dt = user_data;
         const userId = dt.user_id;
         const dbo = db.db('mydb');
         const query = { user_id: userId };
