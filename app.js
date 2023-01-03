@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
 app.use(express.static('public'));                        // build virtual path
-//app.use('/js', express.static(__dirname + '/js'));        // build absolute path
 app.use(express.static(__dirname + '/js'));
 app.use(express.static(__dirname + '/css'));
 app.use(express.static(__dirname + '/img'));
@@ -33,8 +32,9 @@ app.get('/', function (req, res) {                      // build router for page
         let user_id = Date.now();
         let data = { user_id: user_id};
         user_data = data;
+        console.log(user_data);
         fs.writeFileSync('userStory.json', JSON.stringify(data)); // switch to no sync function
-
+        
         let myobj = { user_id: user_id, star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
         dbo.collection("user_story").insertOne(myobj, function (err, res) {
             if (err) throw err;
