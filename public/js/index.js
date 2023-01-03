@@ -9,4 +9,13 @@ $(document).ready(function(){
         window.location.href = "/loader";
         console.log("counter=1");
     });
+    $(".game_intro").click(function(){
+        $('#myModal').modal('show');
+    });
+});
+
+$.ajax({
+    url: '/saveUserStory',
+    type: 'POST',
+    data: {star1: 0, star2: 0, star3: 0, star4: 0, star5: 0, star6: 0, star7: 0, star8: 0}
 });

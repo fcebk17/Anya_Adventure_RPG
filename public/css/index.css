@@ -30,7 +30,7 @@ a {
 .txt-container {
     position:fixed;
     bottom:2%;
-    right:2%;
+    right:10px;
 }
 
 .txt-container:hover::after {
@@ -45,6 +45,28 @@ a {
     content: '看一下ppt嘛(・ω・)ノ';
 }
 
+.game_intro:hover {
+    transform:scale(1.2,1.2);
+}
+
+.txt-container1 {
+    position:fixed;
+    bottom:2%;
+    right:170px;
+}
+
+.txt-container1:hover::after {
+    position: absolute;
+    top:-45px;
+    left:0;
+    color: #fff;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+    content: '遊戲介紹٩(｡・ω・｡)و';
+}
+
 .animate__animated.animate__backInUp {
     position:absolute;
     --animate-duration: 2s;
@@ -55,4 +77,60 @@ a {
     text-shadow: -5px 0 white, 0 5px white, 5px 0 white, 0 -5px white;
     top:200%;
     width: 100%;
+}
+
+button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 60px;
+    width: 210px;
+    opacity: 1;
+    /*background-color: rgba(43, 42, 42, 0.58);
+    border: 3px solid rgba(22, 76, 167, 0.6);*/
+}
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
 }
